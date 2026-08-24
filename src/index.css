@@ -1,0 +1,100 @@
+:root {
+  --color-bg: #f4f5f7;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f7f8fa;
+  --color-text: #16181d;
+  --color-text-muted: #6b7280;
+  --color-primary: #2f5fdb;
+  --color-primary-dark: #23459f;
+  --color-primary-soft: #eaf0fe;
+  --color-danger: #d0392b;
+  --color-danger-soft: #fbeae8;
+  --color-success: #1f8a5c;
+  --color-success-soft: #e8f6ef;
+  --color-border: #e4e6ea;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgba(16, 20, 30, 0.06);
+  --shadow-md: 0 4px 16px rgba(16, 20, 30, 0.08), 0 1px 3px rgba(16, 20, 30, 0.06);
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #101216;
+    --color-surface: #1a1d23;
+    --color-surface-alt: #20242b;
+    --color-text: #f2f3f5;
+    --color-text-muted: #9aa1ab;
+    --color-primary: #6d8ef2;
+    --color-primary-dark: #91a9f5;
+    --color-primary-soft: #232c47;
+    --color-danger: #e5766a;
+    --color-danger-soft: #3a2321;
+    --color-success: #4fbe8c;
+    --color-success-soft: #17352a;
+    --color-border: #2a2e36;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.35);
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.005em;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+}
